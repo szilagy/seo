@@ -1,0 +1,29 @@
+/* Estilo do painel de administração do plugin */
+.wrap h1 {
+    margin-bottom: 20px;
+}
+
+.wrap textarea,
+.wrap input[type="text"],
+.wrap select {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.wrap input[type="submit"] {
+    background-color: #007cba;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.wrap input[type="submit"]:hover {
+    background-color: #006ba1;
+}
