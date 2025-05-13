@@ -16,6 +16,9 @@ include_once plugin_dir_path(__FILE__) . 'page-indexador.php';
 include_once plugin_dir_path(__FILE__) . 'page-seo-avancado-settings.php'; // Mantido da v8 por enquanto
 
 // Adicionando a primeira nova página da v9 para teste
+include_once plugin_dir_path(__FILE__) . 'page-beneficios.php';
+include_once plugin_dir_path(__FILE__) . 'page-faq.php';
+
 include_once plugin_dir_path(__FILE__) . 'page-palavras-chave.php';
 
 include_once plugin_dir_path(__FILE__) . '../includes/cf7-hook.php';
@@ -140,4 +143,23 @@ add_action('admin_menu', function () {
         'sdt-pixels',
         'sdt_render_pixels_page'
     );
+
+	add_submenu_page(
+		'sdt-main',
+		'Benefícios',
+		'Benefícios',
+		'manage_options',
+		'sdt-beneficios',
+		'sdt_render_beneficios_page'
+	);
+
+	add_submenu_page(
+		'sdt-main',
+		'Perguntas Frequentes',
+		'FAQ',
+		'manage_options',
+		'sdt-faq',
+		'sdt_render_faq_page'
+	);
+
 });
