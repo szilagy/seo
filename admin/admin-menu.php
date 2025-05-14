@@ -1,4 +1,5 @@
 <?php
+include_once plugin_dir_path(__FILE__) . 'page-formularios-seo-completo.php';
 if (!defined('ABSPATH')) exit;
 
 // Incluir arquivos das páginas do plugin
@@ -162,4 +163,15 @@ add_action('admin_menu', function () {
 		'sdt_render_faq_page'
 	);
 
+});
+
+add_action('admin_menu', function() {
+	add_submenu_page(
+		'sdt-main',
+		'Formulários + SEO',
+		'Formulários + SEO',
+		'manage_options',
+		'sdt-formularios-seo',
+		'sdt_render_formularios_seo_completo'
+	);
 });
